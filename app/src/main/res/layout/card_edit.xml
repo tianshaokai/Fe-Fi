@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+
+	<TableRow>
+		<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:text="Name" android:layout_width="fill_parent"
+			android:textSize="20sp"
+			android:layout_height="wrap_content" />
+			
+		<EditText android:id="@+id/card_name" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+	</TableRow>
+	<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="MAC" android:textSize="20sp"></TextView>
+		<TextView android:text="TextView" android:layout_height="wrap_content" android:layout_width="fill_parent" android:textSize="20sp" android:gravity="right" android:id="@+id/card_macaddress"></TextView>
+	</TableRow>
+
+	<TableRow>
+		<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:textSize="20sp"
+			android:layout_height="wrap_content" android:text="@string/cardedit_offset"/>
+		<EditText android:text="EditText" android:layout_height="wrap_content" android:layout_width="wrap_content" android:inputType="number|numberSigned" android:id="@+id/cardedit_offset"></EditText>
+	</TableRow>
+
+	<TableRow
+	    android:id="@+id/TableRow01"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cardedit_numimages"
+	        android:textSize="20sp" />
+
+	    <TextView
+	        android:id="@+id/cardedit_stored"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="right"
+	        android:text="TextView"
+	        android:textSize="20sp" />
+	</TableRow>
+
+	<Button android:layout_width="wrap_content" android:id="@+id/button1" android:text="@string/cardedit_recalculate" android:layout_height="wrap_content" android:textSize="20sp" android:onClick="recalculateOffsets"></Button>
+
+	<Button
+	    android:id="@+id/save"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Save"
+	    android:textSize="20sp" />
+
+</TableLayout>

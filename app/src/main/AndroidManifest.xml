@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backupAgent="to.rcpt.fefi.FefiBackupAgent"
+    package="to.rcpt.fefi"
+    android:versionCode="12"
+    android:versionName="2.0.1">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:icon="@drawable/fefi"
+        android:label="@string/app_name">
+
+        <activity android:name=".TabbedHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="EyefiCardEditActivity" />
+        <activity android:name="EyefiCardListActivity" />
+        <activity android:name="IncomingImagesActivity" />
+        <activity android:name="EyefiCardScanActivity" />
+        <activity android:name="SettingsActivity" />
+        <activity android:name="LocationListActivity" />
+        <activity android:name="GeotagActivity" />
+
+        <service android:name="EyefiReceiverService" />
+
+        <receiver android:name="WifiWatcher">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE"></action>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAItorfOQkil_PYlubegObaQlSWOXf5et9y3IBSqQ" />
+
+    </application>
+</manifest>
